@@ -1,0 +1,164 @@
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e2f;
+    /* Fondo oscuro */
+    color: #ffffff;
+    /* Texto blanco */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 600px;
+    width: 90%;
+    background-color: #2a2a3b;
+    /* Fondo del formulario */
+    padding: 25px;
+    /* Espaciado interno */
+    border-radius: 15px;
+    /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* Sombra */
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+h1 span {
+    color: #e63946;
+    /* Corazón en rojo */
+}
+
+/* Etiquetas */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Campos de entrada */
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    /* Se ajusta al contenedor */
+    padding: 10px;
+    margin-bottom: 20px;
+    /* Espaciado entre campos */
+    border: 1px solid #44475a;
+    border-radius: 8px;
+    background-color: #1e1e2f;
+    color: #ffffff;
+    font-size: 14px;
+    box-sizing: border-box;
+    /* Evita que se salga del contenedor */
+}
+
+/* Botones */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    /* Espaciado entre botones */
+    background-color: #e63946;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d62839;
+}
+
+/* Mensaje de nota */
+.note {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #f1fa8c;
+    /* Amarillo claro */
+    text-align: center;
+}
+
+/* Ajuste para móviles */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* historial emocional */
+button,
+.btn {
+    display: block;
+    /* Asegura que ocupen toda la línea */
+    max-width: 250px;
+    /* Ancho máximo para ambos botones */
+    margin: 0 auto 10px;
+    /* Centrado horizontal y espaciado */
+    padding: 12px;
+    background-color: #e63946;
+    /* Mismo color de fondo */
+    border: none;
+    border-radius: 8px;
+    /* Bordes redondeados */
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    /* Centrado del texto */
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    /* Elimina el subrayado del enlace */
+}
+
+button:hover,
+.btn:hover {
+    background-color: #d62839;
+    /* Color al pasar el cursor */
+}
+
+/* Estilo para las entradas del historial */
+.historial-entry {
+    background-color: #2a2a3b;
+    /* Mismo fondo del formulario */
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+}
+
+.historial-entry p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Botón para volver */
+.btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 20px;
+}

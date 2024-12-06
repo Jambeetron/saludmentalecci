@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="/static/style_chatbot.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Chatbot</h1>
+        <div id="chat" class="chat"></div>
+        <div class="input-section">
+            <input type="text" id="mensaje" placeholder="Escribe tu mensaje aquí...">
+            <button id="enviar">Enviar</button>
+        </div>
+        <a href="/templates/index.html" class="btn">Volver al inicio</a>
+    </div>
+
+    <script>
+        document.getElementById("enviar").addEventListener("click", function () {
+            const mensaje = document.getElementById("mensaje").value;
+            if (mensaje.trim() === "") {
+                alert("Por favor, escribe un mensaje.");
+                return;
+            }
+
+            // Mostrar el mensaje en el chat
+            const chat = document.getElementById("chat");
+            chat.innerHTML += `<div class="usuario">Tú: ${mensaje}</div>`;
+
+            // Enviar el mensaje al backend
+            fetch("/procesar_mensaje", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ mensaje: mensaje }),
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    // Mostrar la respuesta del bot
+                    chat.innerHTML += `<div class="bot">Bot: ${data.respuesta}</div>`;
+                })
+                .catch((error) => {
+                    console.error("Error al procesar el mensaje:", error);
+                });
+
+            // Limpiar el campo de entrada
+            document.getElementById("mensaje").value = "";
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e2f;
+    /* Fondo oscuro */
+    color: #ffffff;
+    /* Texto blanco */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 600px;
+    width: 90%;
+    background-color: #2a2a3b;
+    /* Fondo del formulario */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* Sombra */
+    text-align: center;
+    /* Centrar contenido */
+}
+
+/* Título */
+h1 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Sección de chat */
+#chat {
+    background-color: #1e1e2f;
+    border: 1px solid #44475a;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+    min-height: 200px;
+    overflow-y: auto;
+    /* Permitir desplazamiento si es necesario */
+}
+
+/* Mensajes del usuario */
+.usuario {
+    text-align: right;
+    color: #a4f9c8;
+    /* Verde claro */
+    margin: 5px 0;
+}
+
+/* Mensajes del bot */
+.bot {
+    text-align: left;
+    color: #f1fa8c;
+    /* Amarillo claro */
+    margin: 5px 0;
+}
+
+/* Sección de entrada de texto y botón */
+.input-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.input-section input {
+    flex: 1;
+    /* Ocupar el espacio disponible */
+    padding: 10px;
+    border: 1px solid #44475a;
+    border-radius: 8px;
+    background-color: #1e1e2f;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+/* Botón enviar */
+.input-section button {
+    background-color: #e63946;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.input-section button:hover {
+    background-color: #d62839;
+}
+
+/* Botón regresar */
+.btn {
+    display: inline-block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e63946;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #d62839;
+}
